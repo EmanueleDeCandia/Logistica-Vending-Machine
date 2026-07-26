@@ -16,7 +16,7 @@ Il simulatore analizza i costi logistici annuali per una rete di distributori au
 
 ## 📊 Contenuti del Notebook
 
-### 1. **Simulatore Logistica Base** (`e6134306`)
+### 1. **Simulatore Logistica Base**
 Blocco indipendente che calcola i costi logistici totali senza considerare il costo del personale.
 
 **Parametri principali:**
@@ -32,7 +32,7 @@ Blocco indipendente che calcola i costi logistici totali senza considerare il co
 
 ---
 
-### 2. **Analisi di Sensibilità: Numero Distributori** (`25508f9d`)
+### 2. **Analisi di Sensibilità: Numero Distributori**
 Visualizza come il numero di distributori influenza i costi totali e il costo per singolo distributore.
 
 **Range di simulazione:**
@@ -48,14 +48,14 @@ L'aumento dei distributori riduce il costo per singolo punto, evidenziando econo
 
 ---
 
-### 3. **Ripartizione Attività Logistiche** (`6430e678`)
+### 3. **Ripartizione Attività Logistiche**
 Grafici che mostrano:
 - **Pie Chart**: Ripartizione chilometrica tra rifornimento (75%) e assistenza (25%)
 - **Bar Chart**: Confronto tra costi fissi e costi variabili
 
 ---
 
-### 4. **Analisi di Sensibilità: Chilometri Medi Mensili** (`1bf2abab`)
+### 4. **Analisi di Sensibilità: Chilometri Medi Mensili**
 Analizza l'impatto dei chilometri medi per distributore sui costi logistici.
 
 **Range di simulazione:**
@@ -68,10 +68,10 @@ Analizza l'impatto dei chilometri medi per distributore sui costi logistici.
 
 ---
 
-### 5. **Confronto Scenario: Auto Vecchia vs. Furgone Nuovo** (`db99f553`)
+### 5. **Confronto Scenario: Flotta Vecchia vs. Flotta Nuova**
 Comparazione economica tra due tipologie di veicoli:
 
-| Parametro | Auto Vecchia | Furgone Logistica |
+| Parametro | Furgoni Vecchi | Furgone Nuovi |
 |-----------|-------------|-------------------|
 | Carburante | €0.25/km | €0.15/km |
 | Manutenzione | €0.15/km | €0.05/km |
@@ -82,7 +82,7 @@ Comparazione economica tra due tipologie di veicoli:
 
 ---
 
-### 6. **Simulatore Logistico Avanzato con Ottimizzazione** (`8423fe9c`)
+### 6. **Simulatore Logistico Avanzato con Ottimizzazione**
 Modello evoluto che include il costo del personale e l'ottimizzazione dei percorsi.
 
 **Nuove variabili:**
@@ -105,7 +105,7 @@ Visualizza l'incidenza reale di:
 
 ---
 
-### 7. **Analisi della Frequenza di Visita** (`b8f105d5`)
+### 7. **Analisi della Frequenza di Visita**
 Studio sull'impatto della frequenza di rifornimento sui costi per distributore.
 
 **Range di simulazione:**
@@ -170,7 +170,7 @@ Il simulatore può supportare decisioni come:
 ## 📊 Interpretazione dei Risultati
 
 ### Economie di Scala
-L'aumento da 100 a 12.000 distributori riduce il costo per punto da **€778** a **€768**, grazie all'ammortamento del costo fisso su un numero maggiore di unità.
+L'aumento da 100 a 12.000 distributori prima riduce i costi poi li aumenta grazie in quando la riduzione dei costi fissi ha forti vincoli nel personale necessario per la copertura del servizio. Diverso per i costi per singolo OCS: si riducono quando la concentrazione è determinata da un maggior numero di macchine OCS per cliente.
 
 ### Incidenza del Personale
 Con l'inclusione del costo orario, **il personale rappresenta il 77,5%** del costo totale logistica. Le azioni di ottimizzazione dovrebbero prioritizzare:
